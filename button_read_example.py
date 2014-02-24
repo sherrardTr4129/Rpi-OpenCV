@@ -1,16 +1,16 @@
 import RPi.GPIO as GPIO ## Import GPIO library
-import time ## Import 'time' library. Allows us to use 'sleep'
 
 GPIO.setmode(GPIO.BOARD) ## Use board pin numbering
-GPIO.setup(17, GPIO.IN) ## Setup GPIO Pin 7 to OUT
+GPIO.setup(17, GPIO.IN) ## Setup GPIO Pin 17 to OUT
 
 def checkButton():
+    value = 0
     #check button state on pin 17
     ButtonState = GPIO.input(17)
-    #if button is pushed return a 1
+    #if button is pushed set value to 1
     if(ButtonState):
-        return 1
-    #else return a 0
-    else:
-        return 0
+        value = 1
+    GPIO.cleanup()
+    #return value
+    return value
 
