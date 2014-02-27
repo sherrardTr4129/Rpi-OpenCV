@@ -12,4 +12,4 @@ cv2.waitKey(1)
 frame = cap.read()
 
 #save image
-cv.imwrite('person.png',frame)
+cv2.imwrite('person.png',frame)
