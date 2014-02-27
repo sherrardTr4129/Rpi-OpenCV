@@ -1,4 +1,6 @@
 import cv2
+import numpy as np
+
 
 #setup default camera capture
 cap = cv2.VideoCapture(0)
