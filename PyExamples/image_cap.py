@@ -17,7 +17,7 @@ def rampCam():
     # gives camera time to init the
     # stream.
     for i in range(0, ramp_frames):
-        temp = get_image()
+        temp = CaptureImage()
 
 
 #ramp Camera
