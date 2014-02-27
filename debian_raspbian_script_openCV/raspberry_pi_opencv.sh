@@ -22,9 +22,5 @@ echo "building openCV"
 make
 sudo make install
 
-echo "add the following line to the end of the file that is about to open: /usr/local/lib"
-sudo nano /etc/ld.so.conf.d/opencv.conf
 
-echo "add the following line to the end of the file that is about to open: PKG_CONFIG_PATH$ PKG_CONFIG_PATH:/usr/local/lib/pkgconfig export PKG_CONFIG_PATH"
-sudo nano /etc/bash.bashrc
 
