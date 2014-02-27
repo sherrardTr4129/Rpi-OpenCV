@@ -1,4 +1,4 @@
-import pyopencv as cv
+import cv2
 
 #setup default camera capture
 cap = cv2.VideoCapture(0)
