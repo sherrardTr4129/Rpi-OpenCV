@@ -2,14 +2,32 @@ import numpy as np
 import cv2
 
 
+ramp_frames = 30
+
 #setup default camera capture
 cap = cv2.VideoCapture(0)
 
-#wait for camera to initalize
-cv2.waitKey(1)
+def CaptureImage():
+    # take a single frame and it's
+    # succes/fail boolean
+    success, frame = cap.read()
+    return frame
 
-# take a single frame
-frame = cap.read()
+def rampCam():
+    # gives camera time to init the
+    # stream.
+    for i in range(0, ramp_frames):
+        temp = get_image()
+
+
+#ramp Camera
+rampCam()
+
+#get image
+frame = CaptureImage()
 
 #save image
 cv2.imwrite('person.png',frame)
+
+#delete camera object
+del(cap)
